@@ -4,13 +4,13 @@
 > As of **Nov 9th, 2024**, this repository is developed by Konstanius (Konstantin Dubnack), fixing bugs, improving features and maintainig the app for personal use.
 > Any links still pointing to the original repository are subject to be updated in the future.
 
-[![Latest Release](https://img.shields.io/github/v/release/Ivy-Apps/ivy-wallet)](https://github.com/Ivy-Apps/ivy-wallet/releases)
-[![APK](https://github.com/Ivy-Apps/ivy-wallet/actions/workflows/apk.yml/badge.svg)](https://github.com/Ivy-Apps/ivy-wallet/actions/workflows/apk.yml)
+[![Latest Release](https://img.shields.io/github/v/release/Konstanius/ivy-wallet)](https://github.com/Konstanius/ivy-wallet/releases)
+[![APK](https://github.com/Konstanius/ivy-wallet/actions/workflows/apk.yml/badge.svg)](https://github.com/Konstanius/ivy-wallet/actions/workflows/apk.yml)
 [![Telegram Group](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+ETavgioAvWg4NThk)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![GitHub Repo stars](https://img.shields.io/github/stars/Ivy-Apps/ivy-wallet?style=social)](https://github.com/Ivy-Apps/ivy-wallet/stargazers)
-[![Fork Ivy Wallet](https://img.shields.io/github/forks/Ivy-Apps/ivy-wallet?logo=github&style=social)](https://github.com/Ivy-Apps/ivy-wallet/fork)
+[![GitHub Repo stars](https://img.shields.io/github/stars/Konstanius/ivy-wallet?style=social)](https://github.com/Konstanius/ivy-wallet/stargazers)
+[![Fork Ivy Wallet](https://img.shields.io/github/forks/Konstanius/ivy-wallet?logo=github&style=social)](https://github.com/Konstanius/ivy-wallet/fork)
 
 # [Ivy Wallet: money manager](https://play.google.com/store/apps/details?id=com.ivy.wallet)
 
@@ -40,7 +40,7 @@ Ivy Wallet may lack some of the features you're looking for, but it truly shines
 > Join our **[private Telegram Community](https://t.me/+ETavgioAvWg4NThk)**.
 
 > To support our free open source project, please give it a star. ⭐
-> This means a lot to us. Thank you so much! [![GitHub Repo stars](https://img.shields.io/github/stars/Ivy-Apps/ivy-wallet?style=social)](https://github.com/Ivy-Apps/ivy-wallet/stargazers)
+> This means a lot to us. Thank you so much! [![GitHub Repo stars](https://img.shields.io/github/stars/Konstanius/ivy-wallet?style=social)](https://github.com/Konstanius/ivy-wallet/stargazers)
 
 ## Project Requirements
 
@@ -95,7 +95,7 @@ Make sure to check out our short **[Developer Guidelines 🏗️](docs/Guideline
 - [Gradle KTS](https://docs.gradle.org/current/userguide/kotlin_dsl.html) (Kotlin DSL)
 - [Gradle convention plugins](https://docs.gradle.org/current/samples/sample_convention_plugins.html) (build logic)
 - [Gradle version catalogs](https://developer.android.com/build/migrate-to-catalogs) (dependencies versions)
-- [GitHub Actions](https://github.com/Ivy-Apps/ivy-wallet/actions) (CI/CD)
+- [GitHub Actions](https://github.com/Konstanius/ivy-wallet/actions) (CI/CD)
 - [Fastlane](https://fastlane.tools/) (uploads the app to the Google Play Store)
 
 ### Other
@@ -107,17 +107,17 @@ Make sure to check out our short **[Developer Guidelines 🏗️](docs/Guideline
 
 ## Contribute
 
-**Want to contribute?** See **[CONTRIBUTING.md](/CONTRIBUTING.md)** [![Fork Ivy Wallet](https://img.shields.io/github/forks/Ivy-Apps/ivy-wallet?logo=github&style=social)](https://github.com/Ivy-Apps/ivy-wallet/fork)
+**Want to contribute?** See **[CONTRIBUTING.md](/CONTRIBUTING.md)** [![Fork Ivy Wallet](https://img.shields.io/github/forks/Konstanius/ivy-wallet?logo=github&style=social)](https://github.com/Konstanius/ivy-wallet/fork)
 
 ### Contributors Wall:
 
 <a href="https://github.com/ILIYANGERMANOV/ivy-wallet/graphs/contributors">
-  <img alt="contributors graph" src="https://contrib.rocks/image?repo=Ivy-Apps/ivy-wallet" />
+  <img alt="contributors graph" src="https://contrib.rocks/image?repo=Konstanius/ivy-wallet" />
 </a>
 <br>
 <br>
 
-_Note: It may take up to 24 hours for the [contrib.rocks](https://contrib.rocks/preview?repo=Ivy-Apps%2Fivy-wallet) plugin to update._ 
+_Note: It may take up to 24 hours for the [contrib.rocks](https://contrib.rocks/preview?repo=Konstanius%2Fivy-wallet) plugin to update._ 
 
 **P.S.** You'll also be recognized in a special "Contributors" section. We salute you! 👏
 

@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.ivy.design.system.colors.IvyColors
 import com.ivy.ui.R
 
-const val IvyWalletGitHubRepoUrl = "https://github.com/Ivy-Apps/ivy-wallet"
+const val IvyWalletGitHubRepoUrl = "https://github.com/Konstanius/ivy-wallet"
 
 @Composable
 fun OpenSourceCard(

@@ -30,7 +30,7 @@ class GitHubServiceImpl(
     private val ktorClient: HttpClient,
 ) : GitHubService {
     companion object {
-        private const val BASE_URL = "https://api.github.com/repos/Ivy-Apps/ivy-wallet"
+        private const val BASE_URL = "https://api.github.com/repos/Konstanius/ivy-wallet"
     }
 
     override suspend fun fetchIssue(
