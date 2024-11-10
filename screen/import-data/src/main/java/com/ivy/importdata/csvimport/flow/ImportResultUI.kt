@@ -84,14 +84,16 @@ fun ImportResultUI(
             successPercent = successPercent,
         )
 
-        IvyDividerLine(
-            modifier = Modifier.padding(horizontal = 24.dp)
-        )
+        if (result.failedRows.isNotEmpty()) {
+            IvyDividerLine(
+                modifier = Modifier.padding(horizontal = 24.dp)
+            )
 
-        FailedSectionUI(
-            result = result,
-            successPercent = successPercent,
-        )
+            FailedSectionUI(
+                result = result,
+                successPercent = successPercent,
+            )
+        }
 
         // TODO: Implement "See failed imports"
 
