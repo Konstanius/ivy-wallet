@@ -23,6 +23,7 @@ import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.launch
+import java.time.Instant
 import javax.inject.Inject
 
 @Stable
@@ -76,10 +77,12 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch {
             val queryResult = ioThread {
+                val currentInstant = Instant.now()
                 val filteredTransactions = allTrnsAct(Unit)
                     .filter { transaction ->
-                        transaction.title.matchesQuery(normalizedQuery) ||
-                                transaction.description.matchesQuery(normalizedQuery)
+                        (transaction.time.isBefore(currentInstant) || transaction.settled) &&
+                        (transaction.title.matchesQuery(normalizedQuery) ||
+                                transaction.description.matchesQuery(normalizedQuery))
                     }
                 trnsWithDateDivsAct(
                     TrnsWithDateDivsAct.Input(
