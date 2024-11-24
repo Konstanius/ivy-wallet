@@ -291,7 +291,7 @@ fun CashFlowInfo(
 }
 
 @Composable
-private fun IncomeExpenses(
+fun IncomeExpenses(
     percentExpanded: Float,
     currency: String,
     monthlyIncome: Double,

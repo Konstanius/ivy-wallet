@@ -14,6 +14,7 @@ dependencies {
     implementation(projects.shared.ui.navigation)
     implementation(projects.temp.legacyCode)
     implementation(projects.temp.oldDesign)
+    implementation(project(":screen:home"))
 
     testImplementation(projects.shared.ui.testing)
 }

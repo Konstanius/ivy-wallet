@@ -1,5 +1,6 @@
 package com.ivy.search
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -21,9 +22,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ivy.base.legacy.Theme
+import com.ivy.base.legacy.Transaction
+import com.ivy.base.model.TransactionType
 import com.ivy.design.utils.IvyComponentPreview
+import com.ivy.home.CashFlowInfo
+import com.ivy.home.IncomeExpenses
 import com.ivy.legacy.data.AppBaseData
 import com.ivy.legacy.ui.SearchInput
+import com.ivy.legacy.ui.component.transaction.TransactionsDividerLine
 import com.ivy.legacy.ui.component.transaction.transactions
 import com.ivy.legacy.utils.densityScope
 import com.ivy.legacy.utils.keyboardOnlyWindowInsets
@@ -47,11 +53,31 @@ fun SearchScreen(screen: SearchScreen) {
     )
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun SearchUi(
     uiState: SearchState,
     onEvent: (SearchEvent) -> Unit
 ) {
+    var monthlyExpenses = 0.0
+    var monthlyIncome = 0.0
+
+    for (transaction in uiState.transactions) {
+        if (transaction is Transaction) {
+            when (transaction.type) {
+                TransactionType.INCOME -> {
+                    monthlyIncome += transaction.amount.toDouble()
+                }
+                TransactionType.EXPENSE -> {
+                    monthlyExpenses += transaction.amount.toDouble()
+                }
+                TransactionType.TRANSFER -> {
+                    // do nothing
+                }
+            }
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -81,6 +107,19 @@ private fun SearchUi(
         }
 
         Spacer(Modifier.height(16.dp))
+
+        IncomeExpenses(
+            percentExpanded = 0f,
+            currency = uiState.baseCurrency,
+            monthlyIncome = monthlyIncome,
+            monthlyExpenses = monthlyExpenses,
+            hideIncome = false,
+            onHiddenIncomeClick = { }
+        )
+
+        Spacer(Modifier.height(16.dp))
+        TransactionsDividerLine()
+
         val emptyStateTitle = stringResource(R.string.no_transactions)
         val emptyStateText = stringResource(
             R.string.no_transactions_for_query,
